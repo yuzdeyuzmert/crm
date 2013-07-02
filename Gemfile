@@ -7,11 +7,16 @@ gem 'bcrypt-ruby', '3.0.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'pg'
 
 group :development, :test do
-  gem 'sqlite3'
+  gem "sqlite3-ruby", :require => "sqlite3"
   gem 'rspec-rails', '2.11.0'
+end
+group :development do
+  gem 'taps'
+  gem 'rvm'
 end
 
 group :development do
